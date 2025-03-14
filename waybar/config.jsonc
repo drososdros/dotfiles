@@ -27,6 +27,7 @@
         //"battery",
         //"battery#bat2",
         "clock",
+        "custom/powermenu",
     ],
     // Modules configuration
     // "hyprland/workspaces": {
@@ -99,6 +100,11 @@
     //    "bat": "BAT2"
     //},
 
+    "custom/powermenu":{
+        "on-click": "wlogout",
+        "format":""
+
+    },
     "custom/launcher": {
         "format": "",
         "on-click": "exec wofi",

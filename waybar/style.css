@@ -78,6 +78,7 @@ window#waybar.hidden {
 #workspaces,
 #custom-weather,
 #custom-launcher,
+#custom-powermenu
 #idle_inhibitor {
   /* color: #80e6fe; */
   border-radius: 6px;
