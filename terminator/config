@@ -24,10 +24,11 @@
     background_darkness = 0.32
     background_type = transparent
     background_image = /home/xaos/.config/terminator/thumb-1920-72270.jpg
-    font = Source Code Pro Medium 13
+    font = Adwaita Mono 14
     foreground_color = "#ffffff"
     scrollbar_position = hidden
     palette = "#000000:#aa0000:#00aa00:#aa5500:#0000aa:#aa00aa:#00aaaa:#aaaaaa:#555555:#ff5555:#55ff55:#ffff55:#5555ff:#ff55ff:#55ffff:#ffffff"
+    use_system_font = False
     copy_on_selection = True
     title_transmit_bg_color = "#000000"
     title_inactive_bg_color = "#000000"
