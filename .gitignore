@@ -15,4 +15,11 @@ pulse/
 xsettingsd/
 pavucontrol.ini
 QtProject.conf
+go/
+glib-2.0/
+chromium/
+Jackett/
+matplotlib/
+qBittorrent/
+
 
