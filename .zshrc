@@ -152,6 +152,7 @@ alias docker_clean_images='docker rmi $(docker images -a --filter=dangling=true 
 alias docker_clean_ps='docker rm $(docker ps --filter=status=exited --filter=status=created -q)'
 alias br0='sudo ip link add name br0 type bridge && sudo ip link set dev enp47s0f3u3c2 master br0 && sudo ip link set dev br0 up '
 alias secret_key='python -c "import secrets; print(secrets.token_urlsafe(38))"'
+alias c_steam="/home/xaos/.config/custom_steam_runner/steam_run.sh"
 alias screen="python /home/$USER/.config/custom_steam_runner/dissable_enable_monitor.py"
 
 # export DB_HOST="localhost"
