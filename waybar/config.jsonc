@@ -8,11 +8,11 @@
     // Choose the order of the modules
     "modules-left": [
         "hyprland/workspaces",
-	"custom/launcher",
+        "custom/launcher",
         "cpu",
-	"custom/CpuTemp", 
+        "custom/CpuTemp",
         "memory",
-	"disk",
+        "disk",
         "temperature",
         "power-profiles-daemon",
         "hyprland/language",
@@ -24,7 +24,7 @@
         "tray",
         "pulseaudio",
         "network",
-        //"battery",
+        "battery",
         //"battery#bat2",
         "clock",
         "custom/powermenu",
@@ -46,80 +46,85 @@
     //         "default": ""
     //     }
     // },
-
-   "disk": {
-  	"interval": 30,
-  	//"format": "󰋊",
-  	"path": "/",
-  	"format-alt": "{used} used out of {total} on {path} ({percentage_used}%)",
-  	"format": "󰋊 {percentage_free}%",
-  	//"tooltip": true,
-  	"tooltip-format": "used {percentage_used}%)",
-   },
+    "disk": {
+        "interval": 30,
+        //"format": "󰋊",
+        "path": "/",
+        "format-alt": "{used} used out of {total} on {path} ({percentage_used}%)",
+        "format": "󰋊 {percentage_free}%",
+        //"tooltip": true,
+        "tooltip-format": "used {percentage_used}%)",
+    },
     "clock": {
         // "timezone": "America/New_York",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "format-alt": "{:%Y-%m-%d}"
     },
-
-   "cpu": {
-    	"format": "󰻠 {usage}%",
-    	"format-alt": "󰻠 {avg_frequency} GHz",
-    	"interval": 1
+    "cpu": {
+        "format": "󰻠 {usage}%",
+        "format-alt": "󰻠 {avg_frequency} GHz",
+        "interval": 1
     },
-
-   "memory": {
-    	"format": "󰍛 {}%",
-    	"format-alt": "󰍛 {used}/{total} GiB",
-    	"interval": 1
-   },
+    "memory": {
+        "format": "󰍛 {}%",
+        "format-alt": "󰍛 {used}/{total} GiB",
+        "interval": 1
+    },
     "temperature": {
-         "thermal-zone": 2,
-         "hwmon-path": "/sys/class/hwmon/hwmon0/temp1_input",
+        "thermal-zone": 2,
+        "hwmon-path": "/sys/class/hwmon/hwmon0/temp1_input",
         "critical-threshold": 80,
-         "format-critical": "{temperatureC}°C {icon}",
+        "format-critical": "{temperatureC}°C {icon}",
         "format": "{temperatureC}°C {icon}",
-        "format-icons": ["", "", ""]
+        "format-icons": [
+            "",
+            "",
+            ""
+        ]
     },
-    //"battery": {
-    //    "states": {
-    //        // "good": 95,
-    //        "warning": 30,
-    //        "critical": 15
-    //    },
-    //    "format": "{capacity}% {icon}",
-    //    "format-full": "{capacity}% {icon}",
-    //    "format-charging": "{capacity}% ",
-    //    "format-plugged": "{capacity}% ",
-    //    "format-alt": "{time} {icon}",
-    //    // "format-good": "", // An empty format will hide the module
-    //    // "format-full": "",
-    //    "format-icons": ["", "", "", "", ""]
-    //},
+    "battery": {
+        "states": {
+            // "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{capacity}% {icon}",
+        "format-full": "{capacity}% {icon}",
+        "format-charging": "{capacity}% ",
+        "format-plugged": "{capacity}% ",
+        "format-alt": "{time} {icon}",
+        // "format-good": "", // An empty format will hide the module
+        // "format-full": "",
+        "format-icons": [
+            "",
+            "",
+            "",
+            "",
+            ""
+        ]
+    },
     //"battery#bat2": {
     //    "bat": "BAT2"
     //},
-
-    "custom/powermenu":{
+    "custom/powermenu": {
         "on-click": "wlogout",
-        "format":""
-
+        "format": ""
     },
     "custom/launcher": {
         "format": "",
         "on-click": "exec wofi",
-     	"tooltip": false,
+        "tooltip": false,
     },
     "power-profiles-daemon": {
-      "format": "{icon}",
-      "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
-      "tooltip": true,
-      "format-icons": {
-        "default": "",
-        "performance": "",
-        "balanced": "",
-        "power-saver": ""
-      }
+        "format": "{icon}",
+        "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+        "tooltip": true,
+        "format-icons": {
+            "default": "",
+            "performance": "",
+            "balanced": "",
+            "power-saver": ""
+        }
     },
     "network": {
         "format-wifi": "{icon}",
@@ -127,11 +132,17 @@
         "format-ethernet": "",
         "format-disconnected": "󰤭",
         "tooltip-format": "{essid}",
-       // "on-click": "~/.config/waybar/scripts/rofi_network",
-       "on-click": "nm-connection-editor",
-        "format-icons": ["󰤯","󰤟","󰤢","󰤥","󰤨"],
+        // "on-click": "~/.config/waybar/scripts/rofi_network",
+        "on-click": "nm-connection-editor",
+        "format-icons": [
+            "󰤯",
+            "󰤟",
+            "󰤢",
+            "󰤥",
+            "󰤨"
+        ],
     },
-"pulseaudio": {
+    "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
         "format": "{volume}% {icon}",
         "format-bluetooth": "{volume}% {icon}",
@@ -144,11 +155,14 @@
             "phone": "",
             "portable": "",
             "car": "",
-            "default": ["", "", ""]
+            "default": [
+                "",
+                "",
+                ""
+            ]
         },
         "on-click": "pavucontrol"
     },
-
     //"network": {
     //    // "interface": "wlp2*", // (Optional) To force the use of this interface
     //    "format-wifi": "{essid} ({signalStrength}%) ",
@@ -177,15 +191,14 @@
     //    },
     //    "on-click": "pavucontrol"
     //},
-    "custom/CpuTemp":{
-  	"exec": "~/.config/waybar/scripts/heatSensors",
-  	"interval": 10,
-  	"format": "{}",
-	"tooltip": false,  
+    "custom/CpuTemp": {
+        "exec": "~/.config/waybar/scripts/heatSensors",
+        "interval": 10,
+        "format": "{}",
+        "tooltip": false,
     },
-
     "tray": {
-	"icon-size": 15,
-	"spacing": 5
-   },
+        "icon-size": 15,
+        "spacing": 5
+    },
 }
