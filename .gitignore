@@ -1,4 +1,6 @@
 user-dirs.dirs
+configstore/
+neofetch/
 user-dirs.locale
 systemd/
 gtk-3.0/
